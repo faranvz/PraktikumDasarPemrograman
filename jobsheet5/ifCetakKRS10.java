@@ -8,11 +8,11 @@ public class ifCetakKRS10 {
         System.out.println("Apakah UKT sudah lunas? (true/flase): ");
         boolean uktLunas = sc.nextBoolean();
 
-        if (uktLunas) {
-            System.out.println("Pembayaran UKT terverifikasi");
-            System.out.println("Silakan cetak KRS dan minta tanda tangan DPA");
-        } else {
-            System.out.println("Registrasi ditolak. Silakan lunasi UKT terlebih dahulu");
-        }
+        String pesan = uktLunas
+        ? "KRS ditampilkan. Silakan cetak KRS."
+        : "Registrasi ditolak. Silakan lunasi UKT terlebih dahulu.";
+
+        System.out.println(pesan);
+
     }
 }
